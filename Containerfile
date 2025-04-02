@@ -27,7 +27,9 @@ COPY system_files /
 RUN ln -s /run /var/run
 
 RUN mkdir -p /var/lib/alternatives && \
-    /tmp/build.sh
+    /tmp/build.sh \
+    ostree container commit
+
 
 RUN ls /usr/lib/modules
 
